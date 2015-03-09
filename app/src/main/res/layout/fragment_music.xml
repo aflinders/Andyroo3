@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/darkblue"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/andyroo_banner" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerVertical="true"
+            android:text=" Music"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical">
+        </TextView>
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:background="@color/darkblue"
+        android:id="@+id/button_itunes"
+        android:src="@drawable/itunes_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/LinearLayout04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="80dp"
+            android:text="Andyroo - Booster Buddy (audio)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayout05"
+            android:layout_alignEnd="@+id/LinearLayout02"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/LinearLayout02"
+            android:layout_below="@+id/LinearLayout02"
+            android:layout_marginTop="15dp"
+            android:background="#10000080"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#10000080"
+                android:src="@drawable/play_button3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:text="2:56"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/songProgressBar"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#10000080"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/seek_handler" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="0dp"
+                android:text="-0.37"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:text="Andyroo - Wizard Love"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/LinearLayout02"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/LinearLayout02"
+            android:layout_below="@+id/LinearLayout02"
+            android:layout_marginTop="15dp"
+            android:background="#10000080"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/playButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#10000080"
+                android:src="@drawable/play_button3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:text="2:56"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/songProgressBar2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#10000080"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/seek_handler" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="0dp"
+                android:text="-0.37"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:text="Andyroo - Monkeys Bedazzling"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/LinearLayout02"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/LinearLayout02"
+            android:layout_below="@+id/LinearLayout02"
+            android:layout_marginTop="15dp"
+            android:background="#10000080"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/playButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#10000080"
+                android:src="@drawable/play_button3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:text="2:56"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/songProgressBar3"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#10000080"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/seek_handler" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="0dp"
+                android:text="-0.37"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

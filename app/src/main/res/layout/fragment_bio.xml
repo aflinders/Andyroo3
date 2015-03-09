@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/maroon"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/andyroo_banner" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerVertical="true"
+            android:text=" Biography"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical">
+        </TextView>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LinearLayout02"
+        android:layout_marginTop="21dp"
+        android:layout_alignRight="@+id/LinearLayout02"
+        android:layout_alignEnd="@+id/LinearLayout02"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="ANDYROO (Andrew Flinders) was born in Berkeley, California and started playing piano at an early age, earning recognition for his playing. In high school, Andrew graduated from the Harley School and studied piano and chamber music at the Eastman School of Music in Rochester, New York.  Andrew attended Oberlin College in Ohio, where he earned his B.A. in piano performance.  After music school, Andrew invested in an electronic music recording studio (4-track cassette recorder, drum machine, effects unit and several keyboards) and realized his passion for creating his own music.\n\nFor several years, Andrew put his musical endeavors on hold to pursue studies in math and computer science, at New York University, CUNY Queens College, SUNY Binghamton, and Brown University, where he earned his master&apos;s degree (Sc.M.) in computer science on full scholarship.  Andrew has worked with / for Cisco Systems, Martha Stewart, Xerox, Chase Manhattan Bank, JP Morgan, Modulo Systems, Patientkeeper, Rochester Public Schools, Lawyers Cooperative Publishing, Gannett Newspapers.\n\nANDYROO now lives in Jamaica Plain, Boston and creates his music in his home recording studio, ANDYROO STOODIOZ, where he has amassed a respectable collection of keyboards and gear.  He is especially fond of his Yamaha FM 80s keyboards -- DX7, TQ5, V50 -- which one can hear on almost all of his recordings.  Andrew also loves his Roland 80s TR drum machines: TR-505 626 707 727. &quot;I think of them as my children. I get very upset when people don&apos;t respect them properly.&quot;\n\nANDYROO draws from many different styles of music: classical, jazz, pop, dance, funk, alternative, rhythm &amp; blues, electronica, asian and middle eastern.  Having performed Mozart, Beethoven, Gershwin, Chopin and the other great composers, Andrew is also inspired by modern-day musicians such as John Williams, Prince, Madonna, Michael Jackson, James Horner, Sheila E, and too many more to list.  ANDYROO is rumored to have acquired the Ultimate Vinyl Record Collection (tm), particularly during his days as a DJ in college.\n\nANDYROO loves to stay fit, and enjoys running, roller skating, and skiing all over New England and the world.  ANDYROO is rumored to be secretly married to Madonna, Barbara Carrera, and Shirley Bassey. ​"
+            android:id="@+id/textView"
+            android:textColor="#FFFFFF"/>
+
+    </ScrollView>
+
+
+</RelativeLayout>
