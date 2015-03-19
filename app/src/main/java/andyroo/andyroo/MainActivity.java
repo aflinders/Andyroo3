@@ -1,6 +1,8 @@
 package andyroo.andyroo;
 
 import java.util.Locale;
+import 	java.io.IOException;
+import java.io.File;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -25,10 +27,13 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
+import android.media.MediaPlayer;
 
 
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
+
+public class MainActivity extends ActionBarActivity implements ActionBar.TabListener, MediaPlayer.OnCompletionListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -45,10 +50,15 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
      */
     ViewPager mViewPager;
 
+    MediaPlayer mp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mp = new MediaPlayer();
+        mp.setOnCompletionListener(this);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -83,6 +93,16 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+    }
+
+    /**
+     * On Song Playing completed
+     * if repeat is ON play same song again
+     * if shuffle is ON play random song
+     * */
+    @Override
+    public void onCompletion(MediaPlayer arg0) {
+
     }
 
 
@@ -121,6 +141,45 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    public void playButtonPressed(View view) {
+        ImageButton playButton = (ImageButton) view;
+        int id = playButton.getId();
+        if (id == R.id.playButton) {
+            try {
+                AssetFileDescriptor afd = this.getResources().openRawResourceFd(R.raw.booster_buddy);
+                mp.setDataSource(afd.getFileDescriptor());
+                afd.close();
+
+                mp.prepare();
+                mp.start();
+
+
+                // Changing Button Image to pause image
+                playButton.setImageResource(R.drawable.pause_button);
+
+                // set Progress bar values
+                //songProgressBar.setProgress(0);
+                //songProgressBar.setMax(100);
+
+                // Updating progress bar
+                //updateProgressBar();
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        else if (id == R.id.playButton2) {
+            int x = 1;
+        }
+        else if (id == R.id.playButton3) {
+            int x = 1;
+        }
     }
 
     /**
@@ -263,5 +322,4 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             return rootView;
         }
     }
-
 }
